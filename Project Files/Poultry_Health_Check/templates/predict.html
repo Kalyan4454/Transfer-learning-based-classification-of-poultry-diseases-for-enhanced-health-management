@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poultry Disease Prediction</title>
+  <style>
+    body {
+      background-color: #012d1b;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #014c2a;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0, 255, 179, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      color: #00ffb3;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    input[type="file"] {
+      padding: 12px;
+      background: #013b23;
+      color: white;
+      border: 2px dashed #00ffb3;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #00ffb3;
+      color: #013220;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 30px;
+    }
+
+    .result h2 {
+      color: #aaffee;
+    }
+
+    .result img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffb3;
+    }
+
+    a {
+      display: block;
+      margin-top: 30px;
+      color: #90ffcc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Poultry Disease Prediction</h1>
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+      <input type="file" name="file" required>
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+      <div class="result">
+        <h2>Prediction: {{ prediction }}</h2>
+        <img src="{{ img_path }}" alt="Predicted Image">
+      </div>
+    {% endif %}
+
+    <a href="/">← Back to Home</a>
+  </div>
+</body>
+</html>

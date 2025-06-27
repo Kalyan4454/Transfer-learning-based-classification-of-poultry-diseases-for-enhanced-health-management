@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PoultryDetect - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #013220;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #022f1f;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #00ffb3;
+      font-size: 2rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #cfcfcf;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #00ffb3;
+    }
+
+    .main {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .main h2 {
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .main button {
+      background-color: #00ffb3;
+      color: #003d29;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #022f1f;
+      color: #cccccc;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PoultryDetect</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/predict">Prediction</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main">
+    <h2>Welcome to Poultry Health Hub</h2>
+    <p>Your comprehensive resource for poultry disease detection and prevention powered by AI.</p>
+    <button onclick="location.href='/predict'">Get Started</button>
+  </div>
+
+  <div class="grid">
+    <img src="/static/images/cocci.jpg" alt="Coccidiosis">
+    <img src="/static/images/sick_chicken.jpg" alt="Sick Chicken">
+    <img src="/static/images/hen_ground.jpg" alt="Hen on Ground">
+    <img src="/static/images/poultry_farm.jpg" alt="Poultry Farm">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PoultryDetect. Contact: poultrydetect@example.com</p>
+  </footer>
+</body>
+</html>
